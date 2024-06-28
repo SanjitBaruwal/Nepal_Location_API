@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>Hello World</span>
+    <button onclick="handleClick()">click me</button>
+
+    <script>
+      const heading = document.querySelector("h1");
+      const handleClick = () => {
+        heading.innerHTML = "button is clicked.";
+        heading.style.backgroundColor = "green";
+        heading.style.color = "yellow";
+        heading.style.fontSize = "16px";
+      };
+    </script>
+  </body>
+</html>
