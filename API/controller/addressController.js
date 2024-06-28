@@ -1,5 +1,18 @@
 import Nepal from "../data.js";
 
+export const getAllProvinces = async (req, res) => {
+  try {
+    res.status(200).json({
+      success: true,
+      message: "Provinces fetched successfully",
+      data: Nepal,
+    });
+  } catch (error) {
+    console.error("Error fetching provinces:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
 export const getallDistricts = async (req, res) => {
   const { province } = req.params;
 
