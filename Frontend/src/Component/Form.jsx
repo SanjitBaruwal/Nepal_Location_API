@@ -10,7 +10,7 @@ const Form = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/v1/address/provinces", {
+      .get("https://nepal-location-api.vercel.app/api/v1/address/provinces", {
         withCredentials: true,
       })
       .then((res) => {
@@ -29,7 +29,7 @@ const Form = () => {
     const prov = e.target.value;
 
     axios
-      .get(`http://localhost:4000/api/v1/address/provinces/${prov}/districts`, {
+      .get(`https://nepal-location-api.vercel.app/api/v1/address/provinces/${prov}/districts`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -45,7 +45,7 @@ const Form = () => {
 
     axios
       .get(
-        `http://localhost:4000/api/v1/address/provinces/${prov}/districts/${district}/municipalities`,
+        `https://nepal-location-api.vercel.app/api/v1/address/provinces/${prov}/districts/${district}/municipalities`,
         {
           withCredentials: true,
         }
